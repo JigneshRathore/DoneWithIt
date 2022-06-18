@@ -2,13 +2,13 @@ import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import GlobalStyles from "./GlobalStyles";
 // import DetactingOrientation from "./DetactingOrientation";
 // import FlexBox from "./FlexBox";
-import AbsoluteandRelativePositioning from "./AbsoluteandRelativePositioning";
-
+// import AbsoluteandRelativePositioning from "./AbsoluteandRelativePositioning";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
   return (
     <SafeAreaView style={GlobalStyles.androidSafeArea}>
-      <AbsoluteandRelativePositioning />
+      <WelcomeScreen />
       {/* <StatusBar style="auto" /> */}
     </SafeAreaView>
   );
