@@ -6,16 +6,17 @@ export default function FlexBox() {
       style={{
         backgroundColor: "#FFF",
         flex: 1,
-        flexDirection:"row",
-        // flexDirection:"row-reverse",
-        // flexDirection:"column-reverse",
+        flexDirection:"row", //* horizontal : "row-reverse" && "column-reverse",
+        justifyContent: "center", //* main
+        alignItems: "center", //* secondary
       }}
     >
       <View
         style={{
           backgroundColor: "dodgerblue",
           width: 100,
-          height: 100,
+          height: 300,
+          alignSelf:"flex-start"
         }}
       >
         <Text>FlexBox</Text>
@@ -24,7 +25,7 @@ export default function FlexBox() {
         style={{
           backgroundColor: "yellow",
           width: 100,
-          height: 100,
+          height: 200,
         }}
       >
         <Text>FlexBox</Text>
