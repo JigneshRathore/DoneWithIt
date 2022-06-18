@@ -5,24 +5,14 @@ import GlobalStyles from "./GlobalStyles";
 // import AbsoluteandRelativePositioning from "./AbsoluteandRelativePositioning";
 // import WelcomeScreen from "./app/screens/WelcomeScreen";
 // import ViewImageScreen from "./app/screens/ViewImageScreen";
-import Borders from "./app/ui/Borders";
+// import Borders from "./app/ui/Borders";
+import Shadows from "./app/ui/Shadows";
 
 export default function App() {
   return (
     <SafeAreaView style={GlobalStyles.androidSafeArea}>
-      <Borders />
+      <Shadows />
       {/* <StatusBar style="auto" /> */}
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "dodgerblue",
-  },
-  tinyLogo: {
-    width: 50,
-    height: 50,
-  },
-});
