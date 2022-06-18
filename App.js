@@ -15,10 +15,13 @@ import {
 import GlobalStyles from "./GlobalStyles";
 
 export default function App() {
+  //get screen dimensions
   // console.log(Dimensions.get('screen'))
   console.log(useDimensions())
+
+  // get device orientation
   const { landscape } = useDeviceOrientation()
-  // console.log(useDeviceOrientation())
+  // console.log(useDeviceOrientation()) 
   
   return (
     <SafeAreaView style={GlobalStyles.androidSafeArea}>
