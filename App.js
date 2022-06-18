@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import GlobalStyles from "./GlobalStyles";
-import DetactingOrientation from "./DetactingOrientation";
+// import DetactingOrientation from "./DetactingOrientation";
+import FlexBox from "./FlexBox";
 
 export default function App() {
   return (
     <SafeAreaView style={GlobalStyles.androidSafeArea}>
-      <DetactingOrientation />
+      <FlexBox />
       {/* <StatusBar style="auto" /> */}
     </SafeAreaView>
   );
