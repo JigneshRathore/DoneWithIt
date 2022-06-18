@@ -6,12 +6,15 @@ import GlobalStyles from "./GlobalStyles";
 // import WelcomeScreen from "./app/screens/WelcomeScreen";
 // import ViewImageScreen from "./app/screens/ViewImageScreen";
 // import Borders from "./app/ui/Borders";
-import Shadows from "./app/ui/Shadows";
+// import Shadows from "./app/ui/Shadows";
+import AppText from "./app/components/AppText";
 
 export default function App() {
   return (
     <SafeAreaView style={GlobalStyles.androidSafeArea}>
-      <Shadows />
+      <AppText>
+        Encapsulating Styles
+      </AppText>
       {/* <StatusBar style="auto" /> */}
     </SafeAreaView>
   );
