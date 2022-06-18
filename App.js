@@ -4,12 +4,13 @@ import GlobalStyles from "./GlobalStyles";
 // import FlexBox from "./FlexBox";
 // import AbsoluteandRelativePositioning from "./AbsoluteandRelativePositioning";
 // import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
+// import ViewImageScreen from "./app/screens/ViewImageScreen";
+import Borders from "./app/ui/Borders";
 
 export default function App() {
   return (
     <SafeAreaView style={GlobalStyles.androidSafeArea}>
-      <ViewImageScreen />
+      <Borders />
       {/* <StatusBar style="auto" /> */}
     </SafeAreaView>
   );
