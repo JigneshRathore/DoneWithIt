@@ -9,36 +9,45 @@ export default function FlexBox() {
         flexDirection:"row", //* horizontal : "row-reverse" && "column-reverse",
         justifyContent: "center", //* main
         alignItems: "center", //* secondary
+        alignContent: "center",
+        flexWrap: "wrap"
       }}
     >
       <View
         style={{
           backgroundColor: "dodgerblue",
           width: 100,
-          height: 300,
-          alignSelf:"flex-start"
+          height: 100,
         }}
-      >
-        <Text>FlexBox</Text>
-      </View>
+      />
       <View
         style={{
           backgroundColor: "yellow",
           width: 100,
-          height: 200,
+          height: 100,
         }}
-      >
-        <Text>FlexBox</Text>
-      </View>
+      />
       <View
         style={{
           backgroundColor: "tomato",
           width: 100,
           height: 100,
         }}
-      >
-        <Text>FlexBox</Text>
-      </View>
+      />
+      <View
+        style={{
+          backgroundColor: "grey",
+          width: 100,
+          height: 100,
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: "greenyellow",
+          width: 100,
+          height: 100,
+        }}
+      />
     </View>
   );
 }
