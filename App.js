@@ -13,7 +13,7 @@ import AppText from "./app/components/AppText";
 export default function App() {
   return (
     <SafeAreaView style={GlobalStyles.androidSafeArea}>
-      <AppText>Custom Text - Platform specifc css code</AppText>
+      <AppText>Organizing Styles</AppText>
       {/* <Icons /> */}
       {/* <StatusBar style="auto" /> */}
     </SafeAreaView>
