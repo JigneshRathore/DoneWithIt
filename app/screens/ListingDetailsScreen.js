@@ -1,11 +1,11 @@
 import React from "react";
-import { View, StyleSheet, Text, Image } from "react-native";
+import { View, Image, StyleSheet } from "react-native";
 import AppText from "../components/AppText";
-import colors from "../config/colors";``
+import colors from "../config/colors";
 
 export default function ListingDetailsScreen({ title, subTitle, image }) {
   return (
-    <View style={styles.card}>
+    <View>
       <Image style={styles.image} source={image} />
       <View style={styles.detailsContainer}>
         <AppText style={styles.title} >{title}</AppText>
@@ -16,12 +16,6 @@ export default function ListingDetailsScreen({ title, subTitle, image }) {
 }
 
 const styles = StyleSheet.create({
-  card: {
-    // borderRadius: 20,
-    // backgroundColor: colors.white,
-    // marginBottom: 15,
-    // overflow: "hidden"
-  },
   image: {
     width: "100%",
     height: 200,
