@@ -8,12 +8,13 @@ import GlobalStyles from "./GlobalStyles";
 // import Borders from "./app/ui/Borders";
 // import Shadows from "./app/ui/Shadows";
 import AppText from "./app/components/AppText";
-import Icons from "./app/ui/Icons";
+// import Icons from "./app/ui/Icons";
 
 export default function App() {
   return (
     <SafeAreaView style={GlobalStyles.androidSafeArea}>
-      <Icons />
+      <AppText>Custom Text - Platform specifc css code</AppText>
+      {/* <Icons /> */}
       {/* <StatusBar style="auto" /> */}
     </SafeAreaView>
   );
