@@ -10,37 +10,41 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 // import AppText from "./app/components/AppText";
 // import Icons from "./app/ui/Icons";
 // import AppButton from "./app/components/AppButton";
-import Card from "./app/components/Card";
+// import Card from "./app/components/Card";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 
 export default function App() {
   return (
-    <SafeAreaView style={GlobalStyles.androidSafeArea}>
-      <View
-        style={{
-          backgroundColor: "#f8f4f4",
-          padding: 20,
-          paddingTop: 20,
+    <View
+      style={
+        {
+          // backgroundColor: "#f8f4f4",
+          // padding: 20,
+          // paddingTop: 20,
           // alignItems: "center",
-        }}
-      >
-        <Card
-          title="test"
-          subTitle="$200"
-          image={require("./app/assets/images/jacket.jpg")}
-        />
-      </View>
-      {/* <WelcomeScreen /> */}
-      {/* <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <AppButton label="Submit" onClick={() => console.log("Tapped!")}/>
-      </View> */}
-      {/* <AppText>Organizing Styles</AppText> */}
-      {/* <StatusBar style="auto" /> */}
-    </SafeAreaView>
+        }
+      }
+    >
+      <ListingDetailsScreen
+        title="test"
+        subTitle="$200"
+        image={require("./app/assets/images/jacket.jpg")}
+      />
+    </View>
+    // <SafeAreaView style={GlobalStyles.androidSafeArea}>
+
+    //   {/* <WelcomeScreen /> */}
+    //   {/* <View
+    //     style={{
+    //       flex: 1,
+    //       justifyContent: "center",
+    //       alignItems: "center",
+    //     }}
+    //   >
+    //     <AppButton label="Submit" onClick={() => console.log("Tapped!")}/>
+    //   </View> */}
+    //   {/* <AppText>Organizing Styles</AppText> */}
+    //   {/* <StatusBar style="auto" /> */}
+    // </SafeAreaView>
   );
 }
