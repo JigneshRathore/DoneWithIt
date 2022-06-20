@@ -11,26 +11,28 @@ import GlobalStyles from "./GlobalStyles";
 // import Icons from "./app/ui/Icons";
 // import AppButton from "./app/components/AppButton";
 // import Card from "./app/components/Card";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+// import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
 
 export default function App() {
   return (
-    <View
-      style={
-        {
-          // backgroundColor: "#f8f4f4",
-          // padding: 20,
-          // paddingTop: 20,
-          // alignItems: "center",
-        }
-      }
-    >
-      <ListingDetailsScreen
-        image={require("./app/assets/images/jacket.jpg")}
-        title="test"
-        subTitle="$200"
-      />
-    </View>
+    <MessagesScreen />
+    // <View
+    //   style={
+    //     {
+    //       // backgroundColor: "#f8f4f4",
+    //       // padding: 20,
+    //       // paddingTop: 20,
+    //       // alignItems: "center",
+    //     }
+    //   }
+    // >
+    //   <ListingDetailsScreen
+    //     image={require("./app/assets/images/jacket.jpg")}
+    //     title="test"
+    //     subTitle="$200"
+    //   />
+    // </View>
     // <ViewImageScreen />
     // <SafeAreaView style={GlobalStyles.androidSafeArea}>
     //   {/* <WelcomeScreen /> */}
