@@ -4,36 +4,34 @@ import GlobalStyles from "./GlobalStyles";
 // import FlexBox from "./FlexBox";
 // import AbsoluteandRelativePositioning from "./AbsoluteandRelativePositioning";
 // import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
+// import ViewImageScreen from "./app/screens/ViewImageScreen";
 // import Borders from "./app/ui/Borders";
 // import Shadows from "./app/ui/Shadows";
 // import AppText from "./app/components/AppText";
 // import Icons from "./app/ui/Icons";
 // import AppButton from "./app/components/AppButton";
 // import Card from "./app/components/Card";
-// import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 
 export default function App() {
   return (
-    // <View
-    //   style={
-    //     {
-    //       // backgroundColor: "#f8f4f4",
-    //       // padding: 20,
-    //       // paddingTop: 20,
-    //       // alignItems: "center",
-    //     }
-    //   }
-    // >
-      
-      
-    //   <ListingDetailsScreen
-    //     title="test"
-    //     subTitle="$200"
-    //     image={require("./app/assets/images/jacket.jpg")}
-    //   />
-    // </View>
-    <ViewImageScreen />
+    <View
+      style={
+        {
+          // backgroundColor: "#f8f4f4",
+          // padding: 20,
+          // paddingTop: 20,
+          // alignItems: "center",
+        }
+      }
+    >
+      <ListingDetailsScreen
+        image={require("./app/assets/images/jacket.jpg")}
+        title="test"
+        subTitle="$200"
+      />
+    </View>
+    // <ViewImageScreen />
     // <SafeAreaView style={GlobalStyles.androidSafeArea}>
     //   {/* <WelcomeScreen /> */}
     //   {/* <View
