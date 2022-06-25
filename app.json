@@ -21,6 +21,9 @@
       "supportsTablet": true
     },
     "android": {
+      "package":"com.donewithit.app",
+      "versionCode":1 , 
+      "icon": "./app/assets/icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
