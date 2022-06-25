@@ -1,11 +1,12 @@
 import React from "react";
 import {
-  SafeAreaView,
   FlatList,
   StyleSheet,
   StatusBar,
+  Platform,
 } from "react-native";
 import ListItem from "../components/ListItem";
+import Screen from "../components/Screen";
 
 const DATA = [
   {
@@ -22,30 +23,27 @@ const DATA = [
   },
 ];
 
-export default function MessagesScreen() {
-  const renderItem = ({ item }) => (
-    <ListItem
-      title={item.title}
-      image={item.image}
-      subTitle={item.description}
-    />
-  );
+const renderItem = ({ item }) => (
+  <ListItem title={item.title} image={item.image} subTitle={item.description} />
+);
 
+export default function MessagesScreen() {
   return (
-    <SafeAreaView style={styles.container}>
+    <Screen>
       <FlatList
         data={DATA}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />
-    </SafeAreaView>
+    </Screen>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
+    // marginTop: StatusBar.currentHeight || 0,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   item: {
     backgroundColor: "#f9c2ff",
