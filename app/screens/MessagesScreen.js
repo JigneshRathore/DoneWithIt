@@ -1,6 +1,7 @@
 import React from "react";
 import { FlatList, StyleSheet, StatusBar, Platform } from "react-native";
 import ListItem from "../components/ListItem";
+import ListItemDeleteAction from "../components/ListItemDeleteAction";
 import ListItemSeparator from "../components/ListItemSeparator";
 import Screen from "../components/Screen";
 
@@ -20,11 +21,16 @@ const DATA = [
 ];
 
 export default function MessagesScreen() {
+  const handleDelete = () => {
+    console.log("Dlete Press");
+  };
   const renderItem = ({ item }) => (
     <ListItem
       title={item.title}
       image={item.image}
       subTitle={item.description}
+      onPress={() => console.log("item", item)}
+      renderRightActions={() => <ListItemDeleteAction onPress={handleDelete} />}
     />
   );
   return (
