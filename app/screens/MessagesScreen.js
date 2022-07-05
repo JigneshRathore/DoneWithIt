@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FlatList, StyleSheet, StatusBar, Platform } from "react-native";
 import ListItem from "../components/ListItem";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
@@ -9,34 +9,46 @@ const DATA = [
   {
     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
     title: "First Item",
-    description: "D1",
+    description: "J1",
     image: require("../assets/images/mosh.jpg"),
   },
   {
-    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-    title: "Second Item",
-    description: "D2",
+    id: "3ac68afc-48J3-a4f8-a4f8-fbJ91aa97f63",
+    title: "SeconJ Item",
+    Jescription: "J2",
+    image: require("../assets/images/mosh.jpg"),
+  },
+  {
+    id: "3ac68afc-c605-c605-48J3-fjygfrt4r97f6",
+    title: "ThirJ",
+    description: "J3",
     image: require("../assets/images/mosh.jpg"),
   },
 ];
 
 export default function MessagesScreen() {
-  const handleDelete = () => {
-    console.log("Dlete Press");
+  const [messasges, setMessages] = useState(DATA);
+
+  const handleDelete = (id) => {
+    let filter = messasges.filter((data) => data.id !== id);
+    setMessages(filter);
   };
+
   const renderItem = ({ item }) => (
     <ListItem
       title={item.title}
       image={item.image}
       subTitle={item.description}
       onPress={() => console.log("item", item)}
-      renderRightActions={() => <ListItemDeleteAction onPress={handleDelete} />}
+      renderRightActions={() => (
+        <ListItemDeleteAction onPress={() => handleDelete(item.id)} />
+      )}
     />
   );
   return (
     <Screen>
       <FlatList
-        data={DATA}
+        data={messasges}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
         ItemSeparatorComponent={ListItemSeparator}
