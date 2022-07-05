@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FlatList, StyleSheet, StatusBar, Platform } from "react-native";
 import ListItem from "../components/ListItem";
+import Swipabletest from "../components/Swipabletest";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
 import ListItemSeparator from "../components/ListItemSeparator";
 import Screen from "../components/Screen";
@@ -15,7 +16,7 @@ const DATA = [
   {
     id: "3ac68afc-48J3-a4f8-a4f8-fbJ91aa97f63",
     title: "SeconJ Item",
-    Jescription: "J2",
+    description: "J2",
     image: require("../assets/images/mosh.jpg"),
   },
   {
@@ -28,6 +29,7 @@ const DATA = [
 
 export default function MessagesScreen() {
   const [messasges, setMessages] = useState(DATA);
+  const [refeshing, setRefeshing] = useState(false);
 
   const handleDelete = (id) => {
     let filter = messasges.filter((data) => data.id !== id);
@@ -52,6 +54,17 @@ export default function MessagesScreen() {
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
         ItemSeparatorComponent={ListItemSeparator}
+        refreshing={refeshing}
+        onRefresh={(item) => {
+          let newMsg = {
+            id: `75468afc-1343-54-48J3-${Math.random(1111)}`,
+            title: "New message",
+            description: "J4",
+            image: require("../assets/images/mosh.jpg"),
+          };
+          const exist = messasges.find((row) => row.id === newMsg.id);
+          if (!exist) setMessages([...messasges, newMsg]);
+        }}
       />
     </Screen>
   );
