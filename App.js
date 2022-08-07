@@ -21,18 +21,64 @@ import Screen from './app/components/Screen'
 import Icon from './app/components/Icon'
 import ListItem from './app/components/ListItem'
 import AppTextInput from './app/components/AppTextInput'
+import { Switch, View } from 'react-native'
+import { Picker } from '@react-native-picker/picker'
+import AppPicker from './app/components/AppPicker'
 
 export default function App () {
-  const [first, setFirst] = useState('1')
+  const [first, setFirst] = useState('')
+  const [isEnabled, setIsEnabled] = useState(false)
+  const toggleSwitch = () => setIsEnabled((previousState) => !previousState)
+  const [selectedLanguage, setSelectedLanguage] = useState()
+  const [category, setCategory] = useState()
+
+  const categories = [
+    { label: 'Laptop', value: 1 },
+    { label: 'Mobile', value: 2 },
+    { label: 'Tabs', value: 3 }
+  ]
+
   return (
     <Screen>
-      <AppText>{first}</AppText>
-      <AppTextInput
-        value={first}
-        onChangeText={setFirst}
-        placeholder='email'
-        icon='email'
-      />
+      <View
+        style={{
+          padding: 10
+        }}
+      >
+        <AppText>{first}</AppText>
+        <AppPicker
+          selectedItem={category}
+          setSelectedItem={(item) => setCategory(item)}
+          // onChangeText={setFirst}
+          placeholder='Category'
+          icon='apps'
+          style={{
+            backgroundColor: 'lightgray'
+          }}
+          items={categories}
+        />
+        {/* <AppTextInput onChangeText={setFirst} value={first} icon='email' /> */}
+        {/* <Picker
+          selectedValue={selectedLanguage}
+          onValueChange={(itemValue, itemIndex) =>
+            setSelectedLanguage(itemValue)
+          }
+        >
+          <Picker.Item label='Java' value='java' />
+          <Picker.Item label='JavaScript' value='js' />
+          <Picker.Item label='TypeScript' value='ts' />
+          <Picker.Item label='CoreScript' value='cs' />
+          <Picker.Item label='ThatScript' value='ds' />
+        </Picker>
+
+        <Switch
+          value={isEnabled}
+          onValueChange={toggleSwitch}
+          trackColor={{ false: '#767577', true: '#81b0fd' }}
+          thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
+          ios_backgroundColor='#3e3e3e'
+        /> */}
+      </View>
     </Screen>
     // <SafeAreaView style={GlobalStyles.androidSafeArea}>
     //   {/* <LoginScreen
