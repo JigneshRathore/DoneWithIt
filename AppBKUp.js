@@ -21,73 +21,32 @@ import Screen from './app/components/Screen'
 import Icon from './app/components/Icon'
 import ListItem from './app/components/ListItem'
 import AppTextInput from './app/components/AppTextInput'
-import { Switch, View } from 'react-native'
-import { Picker } from '@react-native-picker/picker'
 import AppPicker from './app/components/AppPicker'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { StatusBar, View } from 'react-native'
 
 export default function App () {
-  const [first, setFirst] = useState('')
-  const [isEnabled, setIsEnabled] = useState(false)
-  const toggleSwitch = () => setIsEnabled((previousState) => !previousState)
-  const [selectedLanguage, setSelectedLanguage] = useState()
-  const [category, setCategory] = useState()
-
-  const categories = [
-    { label: 'Laptop', value: 1 },
-    { label: 'Mobile', value: 2 },
-    { label: 'Tabs', value: 3 }
-  ]
-
+  const [first, setFirst] = useState('1')
   return (
-  // <LoginScrstarting forms moduleeen />
-  // <View
-  //   style={{
-  //     // padding: 10
-  //   }}
-  // >
-  // </View>
-  <Screen>
-    <View
+  <View style={{
+    backgroundColor: 'lightgray'
+  }}>
+    {/* <AppText>{first}</AppText> */}
+    <AppPicker
+      value={first}
+      // onChangeText={setFirst}
+      placeholder='Category'
+      icon='apps'
       style={{
-        padding: 10
+        backgroundColor: 'lightgray'
       }}
-    >
-  {/* //     <AppText>{first}</AppText>
-  //     <AppPicker
-  //       selectedItem={category}
-  //       setSelectedItem={(item) => setCategory(item)}
-  //       // onChangeText={setFirst}
-  //       placeholder='Category'
-  //       icon='apps'
-  //       style={{
-  //         backgroundColor: 'lightgray'
-  //       }}
-  //       items={categories}
-  //     /> */}
-  {/* //     <AppTextInput onChangeText={setFirst} value={first} icon='email' /> */}
-      <Picker
-        selectedValue={selectedLanguage}
-        onValueChange={(itemValue, itemIndex) =>
-          setSelectedLanguage(itemValue)
-        }
-      >
-        <Picker.Item label='Java' value='java' />
-        <Picker.Item label='JavaScript' value='js' />
-        <Picker.Item label='TypeScript' value='ts' />
-        <Picker.Item label='CoreScript' value='cs' />
-        <Picker.Item label='ThatScript' value='ds' />
-      </Picker>
-
-      <Switch
-        value={isEnabled}
-        onValueChange={toggleSwitch}
-        trackColor={{ false: '#767577', true: '#81b0fd' }}
-        thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
-        ios_backgroundColor='#3e3e3e'
-      />
-     </View>
-   </Screen>
+    />
+    <AppTextInput
+      onChangeText={setFirst}
+      value={first}
+      icon='email'
+    />
+  </View>
   // <SafeAreaView style={GlobalStyles.androidSafeArea}>
   //   {/* <LoginScreen
   //   image={require("./app/assets/images/jacket.jpg")}
@@ -107,7 +66,7 @@ export default function App () {
   //   >
   //     {/* <ListingScreen /> */}
   //     {/* <AccountScreen /> */}
-  //     {/* <ListItem  title="Test" subTitle="1234" ImageComponent={<Icon name={"email"} />} /> */}
+  //     {/* <ListItem title="Test" subTitle="1234" ImageComponent={<Icon name={'email'} />} /> */}
   //     {/* <MessagesScreen /> */}
   //     {/* <ViewImageScreen /> */}
   //     {/* <SlideUpAnimation /> */}
@@ -116,17 +75,17 @@ export default function App () {
 
   // <SafeAreaView style={GlobalStyles.androidSafeArea}>
   //   {/* <WelcomeScreen /> */}
-  //   {/* <View
+  //   <View
   //     style={{
   //       flex: 1,
-  //       justifyContent: "center",
-  //       alignItems: "center",
+  //       justifyContent: 'center',
+  //       alignItems: 'center'
   //     }}
   //   >
-  //     <AppButton label="Submit" onClick={() => console.log("Tapped!")}/>
-  //   </View> */}
+  //     <AppButton label="Submit" onClick={() => console.log('Tapped!')}/>
+  //   </View>
   //   {/* <AppText>Organizing Styles</AppText> */}
-  //   {/* <StatusBar style="auto" /> */}
+  //   <StatusBar style="auto" />
   // </SafeAreaView>
   )
 }

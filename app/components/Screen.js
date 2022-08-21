@@ -12,8 +12,10 @@ export default function Screen ({ children, style }) {
 
 const styles = StyleSheet.create({
   screen: {
-    paddingTop: Constants.statusBarHeight,
-    // marginTop: Constants.statusBarHeight,
-    flex: 1
+    // paddingTop: Constants.statusBarHeight,
+    flex: 1,
+    // position: 'relative'
+    // top: Constants.statusBarHeight
+    // marginTop: Constants.statusBarHeight
   }
 })
