@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, StyleSheet, TouchableOpacity } from 'react-native'
 import colors from '../config/colors'
+import PropTypes from 'prop-types'
 
 export default function AppButton ({ label, onClick, color = 'primary' }) {
   return (
@@ -28,10 +29,12 @@ const styles = StyleSheet.create({
   }
 })
 
-// label,
-// onClick,
-// color
 
+AppButton.propTypes = {
+  label: PropTypes.object || PropTypes.array,
+  onClick: PropTypes.object || PropTypes.array,
+  color: PropTypes.object || PropTypes.array,
+}
 // AppTextInput.propTypes = {
 //   style: PropTypes.object || PropTypes.array,
 //   value: PropTypes.string,

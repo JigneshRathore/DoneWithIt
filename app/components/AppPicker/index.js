@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import {
   View,
   StyleSheet,
-  TextInput,
-  Platform,
   TouchableWithoutFeedback,
   Modal,
   FlatList
@@ -92,21 +90,14 @@ export default function AppPicker ({
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: colors.light,
-    // backgroundColor: 'lightgray',
-    // borderRadius: 25,
     flexDirection: 'row',
     alignContent: 'center',
     alignItems: 'center',
-    // justifyContent: 'flex-start',
-    // width: '100%',
-    padding: 10,
+    padding: 10
 
-    // marginVertical: 5
   },
   textInput: {
     flex: 1
-    // height: 30
   }
 })
 
@@ -115,11 +106,7 @@ AppPicker.propTypes = {
   selectedItem: PropTypes.object,
   setSelectedItem: PropTypes.func.isRequired,
   items: PropTypes.array.isRequired,
-  placeholder: PropTypes.string.isRequired
-  // value : PropTypes,
-  // children: PropTypes.string.isRequired,
-  // icon : PropTypes,
-  //   foo: PropTypes.string.isRequired,
-  //   bar: PropTypes.func,
-  //   baz: PropTypes.number.isRequired
+  placeholder: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired
 }

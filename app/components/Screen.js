@@ -1,6 +1,6 @@
-import { SafeAreaView, StyleSheet } from 'react-native'
 import React from 'react'
-import Constants from 'expo-constants'
+import { SafeAreaView, StyleSheet } from 'react-native'
+import PropTypes from 'prop-types'
 
 export default function Screen ({ children, style }) {
   return (
@@ -12,10 +12,11 @@ export default function Screen ({ children, style }) {
 
 const styles = StyleSheet.create({
   screen: {
-    // paddingTop: Constants.statusBarHeight,
-    flex: 1,
-    // position: 'relative'
-    // top: Constants.statusBarHeight
-    // marginTop: Constants.statusBarHeight
+    flex: 1
   }
 })
+
+Screen.propTypes = {
+  style: PropTypes.object || PropTypes.array,
+  children: PropTypes.node.isRequired
+}
